@@ -22,6 +22,20 @@ $ sudo mv ./srv /srv
 $ curl -L https://bootstrap.saltstack.com | sudo sh -s -- -P -M
 ```
 
+## 使い方
+
+salt-minionの認証
+
+```bash
+$ salt-key -A
+```
+
+minion1のホストにhighstateする場合
+
+```bash
+$ salt 'minion1*' state.highstate
+```
+
 ## Licence
 
 [MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
