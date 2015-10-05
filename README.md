@@ -14,14 +14,14 @@ $ cd meshblu-salt
 設定ファイルを移動します。
 
 ```bash
-$ sudo mv ./etc/salt /etc/
-$ sudo mv ./srv /srv
+$ mv ./etc/salt /etc/
+$ mv ./srv /srv
 ```
 
 [Salt Bootstrap](https://docs.saltstack.com/en/latest/topics/tutorials/salt_bootstrap.html)からSalt Masterをインストールします。
 
 ```bash
-$ curl -L https://bootstrap.saltstack.com | sudo sh -s -- -P -M
+$ curl -L https://bootstrap.saltstack.com | sh -s -- -P -M
 ```
 
 ## 使い方
