@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import json
+import os
 
-f = open('/root/ipaddress','r')
-ipaddress = f.read().rstrip()
-f.close()
-print(ipaddress)
+base = '/root/iot_apps/meshblu-compose/manage/data'
 
-f = open('/root/iot_apps/meshblu-compose/manage/data/devices.json')
-devices = json.load(f)
+with open(os.path.join(base, 'host.json')) as data_file:    
+    host = json.load(data_file)
+    ipaddress = host['ipaddress']
+
+with open(os.path.join(base, 'devices.json')) as data_file:    
+    devices = json.load(data_file)
 
 trigger = [x for x in devices if x['keyword'] == 'trigger-1'][0]
 print(trigger)
