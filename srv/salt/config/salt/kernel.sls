@@ -4,8 +4,8 @@ kernel-update:
   pkg.installed:
     - refresh: True
     - pkgs:
-      - linux-generic-lts-vivid
-
+      - linux-image-3.16.0-50-generic
+      - linux-image-extra-3.16.0-50-generic
 
 grub-cmdline:
   file.replace:
