@@ -12,8 +12,8 @@ make-config:
     - source: salt://device/makeconfig.py
     - cwd: /root/iot_apps/meshblu-compose
 
-start-manage:
-  cmd.script:
-    - source: salt://device/start.sh
-    - cwd: /root/iot_apps/meshblu-compose
+#start-manage:
+#  cmd.script:
+#    - source: salt://device/start.sh
+#    - cwd: /root/iot_apps/meshblu-compose
 
