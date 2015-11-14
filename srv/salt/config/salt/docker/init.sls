@@ -15,7 +15,7 @@ meshblu-bootstrap:
 
 meshblu-register:
   cmd.run:
-    - name: sleep 20 && docker-compose run --rm iotutil register
+    - name: sleep 25 && docker-compose run --rm iotutil register
     - cwd: /root/iot_apps/meshblu-compose
 
 mosquitto-install:
