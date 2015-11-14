@@ -10,13 +10,13 @@ git-meshblu-compose:
 
 meshblu-bootstrap:
   cmd.run:
-    - name: ./bootstrap.sh && sleep 30 && docker-compose run --rm iotutil -- register && docker-compose run --rm iotutil -- list
+    - name: ./bootstrap.sh
     - cwd: /root/iot_apps/meshblu-compose
 
-#meshblu-register:
-#  cmd.run:
-#    - name: sleep 25 && docker-compose run --rm iotutil register
-#    - cwd: /root/iot_apps/meshblu-compose
+meshblu-register:
+  cmd.run:
+    - name: sleep 15 && docker-compose run --rm iotutil register && docker-compose run --rm iotutil -- list
+    - cwd: /root/iot_apps/meshblu-compose
 
 mosquitto-install:
   pkg.installed:
