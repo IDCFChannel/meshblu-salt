@@ -12,8 +12,9 @@ meshblu-bootstrap:
   cmd.run:
     - name: |
         /root/iot_apps/meshblu-compose/bootstrap.sh
-        sleep 20
-        docker-compose run --rm iotutil register
+        sleep 10
+        docker-compose run --rm iotutil -- register
+        docker-compose run --rm iotutil -- list
     - cwd: /root/iot_apps/meshblu-compose
 
 #meshblu-register:
