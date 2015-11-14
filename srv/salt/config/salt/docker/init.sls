@@ -10,11 +10,7 @@ git-meshblu-compose:
 
 meshblu-bootstrap:
   cmd.run:
-    - name: |
-        /root/iot_apps/meshblu-compose/bootstrap.sh
-        sleep 10
-        docker-compose run --rm iotutil -- register
-        docker-compose run --rm iotutil -- list
+    - name: /root/iot_apps/meshblu-compose/bootstrap.sh && sleep 15 && docker-compose run --rm iotutil -- register && docker-compose run --rm iotutil -- list
     - cwd: /root/iot_apps/meshblu-compose
 
 #meshblu-register:
