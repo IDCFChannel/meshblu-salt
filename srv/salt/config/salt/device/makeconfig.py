@@ -2,15 +2,15 @@
 # -*- coding: utf-8 -*-
 import json
 import os
-import json  
+import json
 
 base = '/root/iot_apps/meshblu-compose/manage/data'
 
-with open(os.path.join(base, 'host.json')) as data_file:    
+with open(os.path.join(base, 'host.json')) as data_file:
     host = json.load(data_file)
     ipaddress = host['ipaddress']
 
-with open(os.path.join(base, 'devices.json')) as data_file:    
+with open(os.path.join(base, 'devices.json')) as data_file:
     devices = json.load(data_file)
 
 trigger = [x for x in devices if x['keyword'] == 'trigger-1'][0]
@@ -34,4 +34,3 @@ print(configStr)
 
 with open('/root/iot_apps/meshblu-compose/sensortag/config.py', mode='w') as a_file:
     a_file.write(configStr)
-

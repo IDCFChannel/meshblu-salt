@@ -2,7 +2,7 @@ sshd_root:
   file.replace:
     - name: /etc/ssh/sshd_config
     - pattern: PermitRootLogin without-password
-    - repl: PermitRootLogin yes 
+    - repl: PermitRootLogin yes
 
 sshd_password:
   file.replace:
@@ -16,4 +16,3 @@ ssh:
     - reload: True
     - watch:
       - file: /etc/ssh/sshd_config
-
