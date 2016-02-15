@@ -7,6 +7,11 @@ copy-host-json:
   cmd.run:
     - name: cp /root/host.json /root/iot_apps/meshblu-compose/manage/data
 
+make-basic:
+  cmd.script:
+    - source: salt://device/basic.py
+    - cwd: /root/iot_apps/meshblu-compose
+
 make-config:
   cmd.script:
     - source: salt://device/makeconfig.py
