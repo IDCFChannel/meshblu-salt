@@ -3,10 +3,10 @@ include:
 
 git-meshblu-compose:
   git.latest:
-    - name: https://github.com/IDCFChannel/meshblu-compose.git 
+    - name: https://github.com/IDCFChannel/meshblu-compose.git
     - target: /root/iot_apps/meshblu-compose
     - require:
-      - pkg: pkg-core 
+      - pkg: pkg-core
 
 meshblu-bootstrap:
   cmd.run:
